@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>登录页面</title>
+		
+		<link rel="stylesheet" href="assets/css/reset.css">
+		<link rel="stylesheet" href="assets/css/supersized.css">
+		<link rel="stylesheet" href="assets/css/style.css">
+	</head>
+	<body>
+	
+	  <div class="page-container">
+	      <h1>登录</h1>
+	      <form>
+	          <input type="text" name="username" class="username" placeholder="用户名">
+	          <input type="password" name="password" class="password" placeholder="密码">
+	          <!-- <button type="submit">登录</button> -->
+	          <input type="button" value="登录" onclick="login()">
+	          <div class="error"><span>+</span></div>
+	      </form>
+	      <div class="connect">
+	         <!--  <p>其他方式登录:</p>
+	          <p>
+	              <a href="">QQ</a>
+	              <a href="">微信</a>
+	              <a href="">微博</a>
+	          </p> -->
+	      </div>
+	  </div>
+	
+	  <!-- Javascript -->
+	  <script src="js/jquery.min.js"></script>
+	  <script src="assets/js/supersized.3.2.7.min.js"></script>
+	  <script src="assets/js/supersized-init.js"></script>
+	  <script src="assets/js/scripts.js"></script>
+	  <script>
+	  	function login(){
+			window.location.href="index.html";
+		}
+	  </script>
+	</body>
+</html>
