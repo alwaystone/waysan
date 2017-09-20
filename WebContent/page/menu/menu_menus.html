@@ -1,0 +1,32 @@
+<!-- menu -->
+<div class="app-aside  bg-black">
+	<!-- list -->
+    <ul class="nav">
+      	<li ui-sref-active="active">
+	        <a ui-sref=".menuList">
+	          	<span>菜单列表</span>
+	        </a>
+      	</li>
+      	<li ui-sref-active="active">
+	        <a ui-sref=".authority">
+	          	<span>菜单权限</span>
+	        </a>
+      	</li>
+    </ul>
+	<!-- / list -->
+</div>
+<!-- / menu -->
+
+<!-- content -->
+<div class="app-content">
+	<a href class="off-screen-toggle hide" ui-toggle-class="off-screen" data-target=".app-aside" ></a>
+	<div class="app-content-body fade-in-up" ui-view></div>
+</div>
+<!-- /content -->
+
+<!-- footer -->
+<div class="app-footer wrapper b-t bg-light">
+	<span class="pull-right">1.0<a href ui-scroll="app" class="m-l-sm text-muted"><i class="fa fa-long-arrow-up"></i></a></span>
+    &copy; 2014 Copyright.
+</div>
+<!-- / footer -->
