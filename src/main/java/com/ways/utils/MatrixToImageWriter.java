@@ -1,4 +1,4 @@
-package webTest;
+package com.ways.utils;
 
 import java.awt.image.BufferedImage;  
 
@@ -14,10 +14,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.EncodeHintType;
 import com.google.zxing.MultiFormatWriter;
-
-/**
- * ¶şÎ¬ÂëµÄÉú³ÉĞèÒª½èÖúMatrixToImageWriterÀà£¬¸ÃÀàÊÇÓÉGoogleÌá¹©µÄ£¬¿ÉÒÔ½«¸ÃÀàÖ±½Ó¿½±´µ½Ô´ÂëÖĞÊ¹ÓÃ
- */
+//äºŒç»´ç ç”Ÿæˆ
 public class MatrixToImageWriter {
     private static final int BLACK = 0xFF000000;
     private static final int WHITE = 0xFFFFFFFF;
@@ -56,17 +53,16 @@ public class MatrixToImageWriter {
     }
 
     public static void main(String[] args) throws Exception {
-        String text = "http://www.baidu.com"; // ¶şÎ¬ÂëÄÚÈİ
-        int width = 300; // ¶şÎ¬ÂëÍ¼Æ¬¿í¶È
-        int height = 300; // ¶şÎ¬ÂëÍ¼Æ¬¸ß¶È
-        String format = "jpg";// ¶şÎ¬ÂëµÄÍ¼Æ¬¸ñÊ½
+        String text = "http://www.baidu.com";
+        int width = 300; 
+        int height = 300;
+        String format = "jpg";
 
         Hashtable<EncodeHintType, String> hints = new Hashtable<EncodeHintType, String>();
-        hints.put(EncodeHintType.CHARACTER_SET, "utf-8"); // ÄÚÈİËùÊ¹ÓÃ×Ö·û¼¯±àÂë
+        hints.put(EncodeHintType.CHARACTER_SET, "utf-8");
 
         BitMatrix bitMatrix = new MultiFormatWriter().encode(text,
                 BarcodeFormat.QR_CODE, width, height, hints);
-        // Éú³É¶şÎ¬Âë
         File outputFile = new File("d:" + File.separator + "new.jpg");
         MatrixToImageWriter.writeToFile(bitMatrix, format, outputFile);
     }
